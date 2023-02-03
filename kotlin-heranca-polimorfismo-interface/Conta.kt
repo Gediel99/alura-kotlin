@@ -1,8 +1,8 @@
 package `kotlin-heranca-polimorfismo-interface`
 
-class Conta(
-    var titular: String,
-    val id: Int
+open class Conta(
+    var titular: Int,
+    val id: String
 ) {
     var saldo = 0.0
         private set
@@ -23,7 +23,7 @@ class Conta(
         return false
     }
 
-    fun sacar(valor: Double) {
+    open fun sacar(valor: Double) {
 
         if (saldo >= valor) {
             this.saldo -= valor
